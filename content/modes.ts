@@ -24,7 +24,7 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
       "Cloud Infrastructure & Deployments",
       "Automation & Shell Scripting",
     ],
-    featuredProjectIds: ["ticket-portal", "sheet-ninja"],
+    featuredProjectIds: ["ticket-portal", "sheet-ninja", "appigo-retailer"],
   },
   developer: {
     id: "developer",
