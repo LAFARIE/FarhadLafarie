@@ -2,10 +2,52 @@ import type { Project } from "./types";
 
 export const PROJECTS: Project[] = [
   {
+    id: "storedeck",
+    title: "Storedeck 2026",
+    description:
+      "Merchant admin + public storefront monorepo (Next.js, Turbo, Prisma, Postgres, Redis, Keycloak). Shops are multi-tenant, pages live as config, deploy notes for AWS Mumbai.",
+    image:
+      "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&q=80",
+    link: "https://github.com/Lafarie",
+    status: "Completed",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Turbo",
+      "Keycloak",
+      "AWS",
+    ],
+    featured: true,
+    tags: ["developer", "devops", "full-stack"],
+  },
+  {
+    id: "kapruka",
+    title: "Kapruka Agra 2026",
+    description:
+      "Chat shopping assistant for Kapruka.com using MCP tools, a streaming agent, product cards, cart, and guest checkout. Supports English, Sinhala, and Tanglish.",
+    image:
+      "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80",
+    link: "https://www.kapruka.com",
+    status: "Completed",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "MCP",
+      "Claude / GPT",
+      "Framer Motion",
+      "Tailwind",
+    ],
+    featured: true,
+    tags: ["developer", "full-stack", "content"],
+  },
+  {
     id: "ticket-portal",
     title: "Ticket Portal 2025",
     description:
-      "Production event ticketing platform hosting 5+ live events and $3000+ in sales. Dockerized and deployed via GitLab CI/CD with SonarQube, plus React Native Android/iOS ticket validator apps.",
+      "Live-event ticketing with Docker + GitLab CI/CD, QR flow, and a React Native door scanner on the Play Store. Real events, real tickets.",
     image:
       "https://i.ibb.co/hJ7126s9/Screenshot-12-2-2026-01334-ticket-hsenidmobile-com.jpg",
     link: "https://serendisco.rush.lk/",
@@ -26,7 +68,7 @@ export const PROJECTS: Project[] = [
     id: "sheet-ninja",
     title: "Sheet Ninja 2025",
     description:
-      "Enterprise bidirectional sync between Google Sheets and GitLab with 6+ integrations, encrypted credentials, Docker deployment, and log tracking for safe record syncing under Agile delivery.",
+      "Two-way sync between GitLab and Google Sheets so PMs and engineers stop copy-pasting. Docker deploy, setup wizard, encrypted credentials.",
     image: "https://tobias-sell.com/wp-content/uploads/2020/10/header.jpg",
     link: "https://github.com/Lafarie/Sheet-Ninja",
     status: "Completed",
@@ -38,7 +80,7 @@ export const PROJECTS: Project[] = [
     id: "appigo-retailer",
     title: "appiGo Retailer 2024",
     description:
-      "Containerized Docker build pipeline for a production eCommerce website builder — staging and production releases via GitLab CI/CD, Apache optimization (35% faster responses), and load troubleshooting for strict SLAs.",
+      "Docker and GitLab build path for a live eCommerce builder: staging then production, Apache tuning when pages get slow.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
     link: "https://appigo.co/stores/",
@@ -51,7 +93,7 @@ export const PROJECTS: Project[] = [
     id: "aiducator",
     title: "AIducator 2024",
     description:
-      "AI-powered 3D eLearning platform serving 500+ students — ChatGPT tutoring, 3D model viewer, and Sentry error tracking that cut MTTR by 45%. Led a team of 6 engineers.",
+      "Student-team eLearning app with ChatGPT tutoring and a 3D model viewer. Sentry on environments so crashes had stack traces for debugging.",
     image: "https://i.ibb.co/MSTKtD5/Screenshot-2024-07-11-at-9-22-37-AM.png",
     link: "https://aiducator.vercel.app/",
     status: "Completed",

@@ -34,7 +34,7 @@ export function ContactSection() {
         setStatus("error");
       }
     } catch {
-      setErrorMsg("Network error — please try again.");
+      setErrorMsg("Network error. Please try again.");
       setStatus("error");
     }
   };
@@ -55,7 +55,7 @@ export function ContactSection() {
             <CheckCircle size={48} className="text-green-500" />
             <h3 className="text-xl font-semibold text-ink">Message sent!</h3>
             <p className="text-sm text-ink-dim">
-              Thanks for reaching out — I'll get back to you soon.
+              Thanks for reaching out. I'll get back to you soon.
             </p>
             <button
               type="button"

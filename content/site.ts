@@ -10,7 +10,19 @@ export const SITE: SiteContent = {
     email: "farhadlafarie@gmail.com",
     phone: "+94776350933",
     location: "Dehiwala, Sri Lanka",
-    cvUrl: "/FarhadLafarieCV.pdf",
+    cvUrl: "/cv/FarhadLafarie-FullStack.pdf",
+    cv: {
+      fullStack: {
+        label: "Full-Stack Developer",
+        viewHref: "/cv/dev/",
+        pdfHref: "/cv/FarhadLafarie-FullStack.pdf",
+      },
+      devops: {
+        label: "DevOps Engineer",
+        viewHref: "/cv/devops/",
+        pdfHref: "/cv/FarhadLafarie-DevOps.pdf",
+      },
+    },
     jobTitles: ["DevOps Engineer", "Full-Stack Developer"],
   },
   hero: {
@@ -21,7 +33,7 @@ export const SITE: SiteContent = {
       "I'm a passionate developer with a focus on creating engaging and efficient user experiences. With a background in Software Engineering and a keen eye for design, I specialize in developing responsive, high-performing websites and applications using the latest web technologies.",
   },
   stats: {
-    projects: 12,
+    projects: 14,
     languages: 15,
     years: 3,
     clients: 5,
@@ -126,3 +138,5 @@ export type { SiteContent, PortfolioMode, ModeConfig, Project } from "./types";
 export { PROJECTS } from "./projects";
 export { MODES, MODE_TAB_ORDER } from "./modes";
 export { SECTIONS } from "./sections";
+export { CV_VARIANTS, CV_VARIANT_ORDER } from "./cv";
+export type { CvVariant, CvVariantId } from "./cv";

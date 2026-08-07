@@ -9,6 +9,7 @@ import { gsap, useGSAP, prefersReducedMotion, ScrollTrigger } from "@/lib/gsap";
 import { SITE } from "@/content/site";
 import { scrollToSection } from "@/lib/snap-scroll";
 import { cn } from "@/lib/utils";
+import { CvChooser } from "@/components/ui/CvChooser";
 
 export default function Navbar() {
   const shellRef = useRef<HTMLElement>(null);
@@ -16,6 +17,7 @@ export default function Navbar() {
   const menuRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState<string>(SITE.nav[0]?.id ?? "featured");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [cvOpen, setCvOpen] = useState(false);
 
   const sections = useMemo(() => SITE.nav.map((item) => item.id), []);
 
@@ -24,6 +26,12 @@ export default function Navbar() {
     setActiveSection(id);
     setMobileOpen(false);
     scrollToSection(id);
+  };
+
+  const openCv = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    setCvOpen(true);
   };
 
   useEffect(() => {
@@ -47,6 +55,15 @@ export default function Navbar() {
     onScroll();
     return () => scroller.removeEventListener("scroll", onScroll);
   }, [sections]);
+
+  useEffect(() => {
+    if (!cvOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setCvOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [cvOpen]);
 
   useGSAP(
     () => {
@@ -128,76 +145,111 @@ export default function Navbar() {
   );
 
   return (
-    <header ref={shellRef} className="pointer-events-none fixed inset-x-0 top-0 z-50 print:hidden">
-      <nav ref={navRef} className="low-poly-nav pointer-events-auto mx-auto w-full max-w-6xl">
-        <div className="relative mx-auto flex items-center justify-between px-3 py-3 sm:px-4">
-          <Link href="/" className="inline-flex items-center gap-2" style={{ color: "#1a1a1a", fontWeight: 700, fontSize: "0.9rem", letterSpacing: "0.02em" }}>
-            <span className="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg border border-line bg-surface">
-              <Image src="/logo.png" alt="Farhad Lafarie" width={32} height={32} className="h-8 w-8 object-cover" />
-            </span>
-            <span className="hidden sm:inline" style={{ color: "#1a1a1a" }}>{SITE.meta.name}</span>
-            <span className="sm:hidden" style={{ color: "#1a1a1a" }}>Farhad</span>
-          </Link>
-
-          <ul className="hidden items-center gap-1 md:flex">
-            {SITE.nav.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={item.href}
-                  onClick={handleNav(item.id)}
-                  data-active={activeSection === item.id ? "true" : undefined}
-                  style={{ color: activeSection === item.id ? "#1a1a1a" : "#555555" }}
-                  className={cn(
-                    "sketch-nav-link rounded-xl px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition",
-                    activeSection === item.id ? "border border-line-strong bg-surface" : "",
-                  )}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a href={SITE.meta.cvUrl} download className="low-poly-chip text-xs font-semibold" style={{ color: "#1a1a1a" }}>
-                CV
-              </a>
-            </li>
-          </ul>
-
-          <button
-            type="button"
-            onClick={() => setMobileOpen((v) => !v)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line md:hidden"
-            style={{ color: "#1a1a1a" }}
-            aria-expanded={mobileOpen}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          >
-            {mobileOpen ? <X size={18} /> : <Menu size={18} />}
-          </button>
-        </div>
-      </nav>
-
-      <div
-        ref={menuRef}
-        className="pointer-events-auto mx-auto mt-2 w-[calc(100%-1rem)] max-w-6xl rounded-2xl border border-line bg-surface/95 p-2 shadow-lg md:hidden"
-        style={{ visibility: mobileOpen ? "visible" : "hidden", display: "block" }}
-      >
-        <div className="flex flex-col gap-1">
-          {SITE.nav.map((item) => (
-            <a
-              key={`mobile-${item.id}`}
-              href={item.href}
-              onClick={handleNav(item.id)}
-              style={{ color: activeSection === item.id ? "#1a1a1a" : "#555555" }}
-              className={cn(
-                "rounded-lg px-3 py-2 text-sm font-semibold",
-                activeSection === item.id ? "bg-base" : "",
-              )}
+    <>
+      <header ref={shellRef} className="pointer-events-none fixed inset-x-0 top-0 z-50 print:hidden">
+        <nav ref={navRef} className="low-poly-nav pointer-events-auto mx-auto w-full max-w-6xl">
+          <div className="relative mx-auto flex items-center justify-between px-3 py-3 sm:px-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2"
+              style={{
+                color: "#1a1a1a",
+                fontWeight: 700,
+                fontSize: "0.9rem",
+                letterSpacing: "0.02em",
+              }}
             >
-              {item.label}
-            </a>
-          ))}
+              <span className="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg border border-line bg-surface">
+                <Image
+                  src="/logo.png"
+                  alt="Farhad Lafarie"
+                  width={32}
+                  height={32}
+                  className="h-8 w-8 object-cover"
+                />
+              </span>
+              <span className="hidden sm:inline" style={{ color: "#1a1a1a" }}>
+                {SITE.meta.name}
+              </span>
+              <span className="sm:hidden" style={{ color: "#1a1a1a" }}>
+                Farhad
+              </span>
+            </Link>
+
+            <ul className="hidden items-center gap-1 md:flex">
+              {SITE.nav.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={item.href}
+                    onClick={handleNav(item.id)}
+                    data-active={activeSection === item.id ? "true" : undefined}
+                    style={{ color: activeSection === item.id ? "#1a1a1a" : "#555555" }}
+                    className={cn(
+                      "sketch-nav-link rounded-xl px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition",
+                      activeSection === item.id ? "border border-line-strong bg-surface" : "",
+                    )}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <button
+                  type="button"
+                  onClick={openCv}
+                  className="low-poly-chip text-xs font-semibold"
+                  style={{ color: "#1a1a1a" }}
+                >
+                  CV
+                </button>
+              </li>
+            </ul>
+
+            <button
+              type="button"
+              onClick={() => setMobileOpen((v) => !v)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line md:hidden"
+              style={{ color: "#1a1a1a" }}
+              aria-expanded={mobileOpen}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileOpen ? <X size={18} /> : <Menu size={18} />}
+            </button>
+          </div>
+        </nav>
+
+        <div
+          ref={menuRef}
+          className="pointer-events-auto mx-auto mt-2 w-[calc(100%-1rem)] max-w-6xl rounded-2xl border border-line bg-surface/95 p-2 shadow-lg md:hidden"
+          style={{ visibility: mobileOpen ? "visible" : "hidden", display: "block" }}
+        >
+          <div className="flex flex-col gap-1">
+            {SITE.nav.map((item) => (
+              <a
+                key={`mobile-${item.id}`}
+                href={item.href}
+                onClick={handleNav(item.id)}
+                style={{ color: activeSection === item.id ? "#1a1a1a" : "#555555" }}
+                className={cn(
+                  "rounded-lg px-3 py-2 text-sm font-semibold",
+                  activeSection === item.id ? "bg-base" : "",
+                )}
+              >
+                {item.label}
+              </a>
+            ))}
+            <button
+              type="button"
+              onClick={openCv}
+              className="rounded-lg px-3 py-2 text-left text-sm font-semibold text-ink"
+            >
+              CV
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <CvChooser open={cvOpen} onClose={() => setCvOpen(false)} />
+    </>
   );
 }

@@ -46,7 +46,7 @@ function buildCubeGrid(width: number, height: number, scaleUnit: number): CubeSl
         id: `${r}-${c}`,
         x,
         y: r * yStep,
-        // depth among cubes only — capped so rows never beat page content
+        // depth among cubes only  -  capped so rows never beat page content
         zIndex: Math.min(r + 2, 8),
       });
     }

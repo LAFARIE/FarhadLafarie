@@ -5,7 +5,7 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
     id: "devops",
     label: "DevOps",
     tabLabel: "devops",
-    tagline: "Pipelines, containers, and cloud — shipped with care.",
+    tagline: "Pipelines, containers, and cloud, shipped carefully.",
     intro:
       "I design CI/CD workflows, containerized deployments, and reliable infrastructure so products reach production safely.",
     character: {
@@ -24,7 +24,7 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
       "Cloud Infrastructure & Deployments",
       "Automation & Shell Scripting",
     ],
-    featuredProjectIds: ["ticket-portal", "sheet-ninja", "appigo-retailer"],
+    featuredProjectIds: ["storedeck", "ticket-portal", "appigo-retailer"],
   },
   developer: {
     id: "developer",
@@ -49,7 +49,7 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
       "Full-Stack Web & Mobile Development",
       "Responsive UI & API Integrations",
     ],
-    featuredProjectIds: ["ticket-portal", "sheet-ninja", "aiducator"],
+    featuredProjectIds: ["storedeck", "kapruka", "ticket-portal"],
   },
   "content-creator": {
     id: "content-creator",
@@ -70,12 +70,12 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
       backgroundUiverse: "slippery-bird-76",
     },
     highlights: [
-      "@officialJoelEditz — funny meme edits",
-      "@Build2Learn — educational tech edits",
+      "@officialJoelEditz: funny meme edits",
+      "@Build2Learn: educational tech edits",
       "eLearning & Technical Visual Design",
       "Video Editing & Digital Storytelling",
     ],
-    featuredProjectIds: ["ticket-portal", "sheet-ninja"],
+    featuredProjectIds: ["kapruka", "aiducator"],
   },
 };
 

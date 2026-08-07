@@ -66,7 +66,12 @@ export type SiteContent = {
     email: string;
     phone: string;
     location: string;
+    /** Default / legacy single CV PDF (Full-Stack track) */
     cvUrl: string;
+    cv: {
+      fullStack: { viewHref: string; pdfHref: string; label: string };
+      devops: { viewHref: string; pdfHref: string; label: string };
+    };
     jobTitles: string[];
   };
   hero: {

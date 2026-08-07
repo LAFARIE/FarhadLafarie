@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Automatically gets the current date format (YYYY-MM-DD)
   const currentDate = new Date().toISOString().split("T")[0];
 
   return [
@@ -22,6 +21,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: "https://farhad-lafarie.vercel.app/cv/dev/",
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: "https://farhad-lafarie.vercel.app/cv/devops/",
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
   ];
 }

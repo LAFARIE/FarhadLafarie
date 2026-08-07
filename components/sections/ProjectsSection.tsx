@@ -1,17 +1,30 @@
 "use client";
 
 import { SITE } from "@/content/site";
+import type { PortfolioMode, Project } from "@/content/types";
 import { useMode } from "@/context/ModeContext";
 import { ExternalLink } from "lucide-react";
 
-export function ProjectsSection() {
-  const { modeConfig } = useMode();
+function matchesMode(project: Project, mode: PortfolioMode): boolean {
+  if (mode === "devops") return project.tags.includes("devops");
+  if (mode === "developer") {
+    return project.tags.some((t) =>
+      ["developer", "full-stack", "mobile"].includes(t),
+    );
+  }
+  return project.tags.some((t) => ["content", "developer"].includes(t));
+}
 
-  const featured = SITE.projects.filter((p) =>
-    modeConfig.featuredProjectIds.includes(p.id),
-  );
+export function ProjectsSection() {
+  const { mode, modeConfig } = useMode();
+
+  const featured = modeConfig.featuredProjectIds
+    .map((id) => SITE.projects.find((p) => p.id === id))
+    .filter((p): p is Project => Boolean(p));
+
+  const featuredIds = new Set(featured.map((p) => p.id));
   const rest = SITE.projects.filter(
-    (p) => !modeConfig.featuredProjectIds.includes(p.id),
+    (p) => !featuredIds.has(p.id) && matchesMode(p, mode),
   );
 
   return (
@@ -24,7 +37,8 @@ export function ProjectsSection() {
           My Projects
         </h2>
         <p className="mt-3 max-w-2xl text-ink-dim">
-          Featured for {modeConfig.label.toLowerCase()} — plus the full archive.
+          Featured for {modeConfig.label.toLowerCase()}: Storedeck, Kapruka, and
+          role-matched work. Switch mode to re-rank the list.
         </p>
 
         {/* Software Projects Grid */}
@@ -74,7 +88,7 @@ export function ProjectsSection() {
           </ul>
         </div>
 
-        {/* YouTube Channels & Video Highlights — always visible */}
+        {/* YouTube Channels & Video Highlights  -  always visible */}
         <div className="mt-16 border-t border-line/30 pt-12">
             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-saffron">
               YouTube Channels &amp; Video Edits
@@ -176,7 +190,7 @@ export function ProjectsSection() {
         {rest.length > 0 ? (
           <div className="mt-12">
             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-ink-faint">
-              More projects
+              More for {modeConfig.label.toLowerCase()}
             </h3>
             <ul className="mt-4 space-y-3">
               {rest.map((project) => (

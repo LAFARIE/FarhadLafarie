@@ -128,7 +128,7 @@ function OrbitPath({ radius, tone }: { radius: number; tone: "grape" | "saffron"
   );
 }
 
-// ─── sun (exact Kapruka structure — works correctly with zero-sized wrapper) ──
+// ─── sun (exact Kapruka structure  -  works correctly with zero-sized wrapper) ──
 // Colors are hardcoded here so the sketch theme's dark-gray token overrides don't affect the sun.
 function ShowcaseSun() {
   return (

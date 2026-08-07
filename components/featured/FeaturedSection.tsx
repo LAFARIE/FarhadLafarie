@@ -53,15 +53,15 @@ export function FeaturedSection() {
         {/* Side-by-side on lg+, stacked on mobile */}
         <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-stretch lg:gap-0">
 
-          {/* Character Image — full width on mobile, fixed width on desktop */}
+          {/* Character Image  -  full width on mobile, fixed width on desktop */}
           <div className="w-full max-w-[280px] shrink-0 sm:max-w-[300px] lg:w-[260px] lg:max-w-none xl:w-[300px]">
             <ModePersonImage />
           </div>
 
-          {/* Divider spacing — visible only on desktop as a gap */}
+          {/* Divider spacing  -  visible only on desktop as a gap */}
           <div className="hidden lg:block lg:w-8 xl:w-10 shrink-0" />
 
-          {/* Detail Card — fade only, no y-shift */}
+          {/* Detail Card  -  fade only, no y-shift */}
           <AnimatePresence mode="wait">
             <motion.div
               key={modeConfig.id}
@@ -72,7 +72,7 @@ export function FeaturedSection() {
               className="low-poly-panel w-full flex-1 p-6 text-left sm:p-8 lg:p-8"
             >
               <span className="mb-2 block text-xs font-bold uppercase tracking-[0.16em] text-ink-dim/70">
-                Farhad Lafarie — DevOps & Full-Stack Portfolio
+                Farhad Lafarie | DevOps & Full-Stack Portfolio
               </span>
               <h1 className="low-poly-heading text-xl font-semibold tracking-tight text-ink sm:text-2xl lg:text-3xl">
                 {modeConfig.tagline}

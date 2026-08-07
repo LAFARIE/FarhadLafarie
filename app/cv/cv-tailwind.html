@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!-- DevOps-track CV. Source of truth for /cv/devops + DevOps PDF. See AGENTS.md. -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Farhad Lafarie CV</title>
+    <title>Farhad Lafarie | DevOps CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /* @page {
@@ -91,7 +92,7 @@
         <!-- Summary Section -->
         <section class="mb-0">
           <h3 class="text-sm font-bold text-blue-600 border-b-2 border-gray-300 mt-1 mb-3 uppercase" style="color: #046bfb">SUMMARY</h3>
-          <p class="text-sm text-gray-700 leading-6">DevOps Engineer undergraduate with hands-on experience building production web and mobile applications, automating CI/CD pipelines, scripting with Python and Bash, and managing cloud infrastructure. Currently employed as a Trainee DevOps Engineer at hSenid Mobile Solutions, working daily with Docker, Kubernetes, GitLab CI/CD, and monitoring tools such as Grafana and Sentry. Experienced in full-stack development using Next.js, Node.js, and React Native with strong foundation in cloud technologies, automation, collaborative problem-solving, and a proven track record of directing teams in hackathons and coding competitions.</p>
+          <p class="text-sm text-gray-700 leading-6">Software engineering undergraduate working as a Trainee DevOps Engineer at hSenid Mobile Solutions. Daily work covers GitLab CI/CD, Docker, Kubernetes, Linux servers, and monitoring with Grafana and Sentry. Scripting in Python and Bash. Also builds full-stack applications with Next.js, Node.js, and React Native when required.</p>
         </section>
 
         <!-- Education Section -->
@@ -106,6 +107,24 @@
             </div>
             <h5 class="text-sm font-medium text-gray-700 mb-0" style="font-weight: 500">Informatics Institute of Technology affiliated with University of Westminster, UK</h5>
           </div>
+          <div class="mb-0 mt-2">
+            <div class="flex justify-between items-end mb-0">
+              <h4 class="text-sm font-bold text-gray-600 uppercase mb-0">GCE Advanced Level (A/L)</h4>
+              <div class="text-sm font-bold text-gray-700 ml-auto">
+                <p class="text-sm mt-0">2021</p>
+              </div>
+            </div>
+            <h5 class="text-sm font-medium text-gray-700 mb-0" style="font-weight: 500">Completed / Passed</h5>
+          </div>
+          <div class="mb-0 mt-2">
+            <div class="flex justify-between items-end mb-0">
+              <h4 class="text-sm font-bold text-gray-600 uppercase mb-0">GCE Ordinary Level (O/L)</h4>
+              <div class="text-sm font-bold text-gray-700 ml-auto">
+                <p class="text-sm mt-0">2018</p>
+              </div>
+            </div>
+            <h5 class="text-sm font-medium text-gray-700 mb-0" style="font-weight: 500">Completed / Passed</h5>
+          </div>
         </section>
 
         <!-- Experience Section -->
@@ -115,24 +134,24 @@
             <div class="flex justify-between items-end mb-0">
               <h4 class="text-sm font-bold text-gray-600 uppercase mb-0">Trainee DevOps Engineer</h4>
               <div class="text-sm font-bold text-gray-700 ml-auto">
-                <p class="text-sm mt-0">September 2024 - June 2026  (1 year 10 months)</p>
+                <p class="text-sm mt-0">September 2024 - June 2026</p>
               </div>
             </div>
             <h5 class="text-sm font-medium text-gray-700 mb-0" style="font-weight: 500">
-              hSenid Mobile Solutions | 3rd Floor, 320 T. B. Jayah Mawatha, Colombo 01000
+              hSenid Mobile Solutions | Colombo, Sri Lanka
             </h5>
             <ul class="pl-4 mb-0 mt-1" style="margin-left: 0">
               <li class="text-sm text-gray-700 list-none mb-0" style="font-size: 14px;">
-                Systematized CI/CD builds and deployments using GitLab CI/CD, reducing release cycle time from 2 hours to 15 minutes (87% reduction) and developed 8+ automation scripts in Python and Bash, eliminating 10+ hours of repetitive tasks weekly.
+                Maintain and improve GitLab CI/CD for assigned products. Reduce failed builds, clarify pipeline stages, and shorten release times through better automation.
               </li>
               <li class="text-sm text-gray-700 list-none mb-0" style="font-size: 14px;">
-                Orchestrated containerized applications using Docker and Kubernetes, enabling 40% faster scaling and supporting 3+ production deployments monthly on AWS with zero critical downtime.
+                Automate repeated tasks with Python and Bash. Package and deploy applications with Docker, and Kubernetes on AWS where the team uses it.
               </li>
               <li class="text-sm text-gray-700 list-none mb-0" style="font-size: 14px;">
-                Deployed Sentry and Grafana monitoring dashboards, reducing mean time to detect errors from 4 hours to 12 minutes and improving issue resolution velocity by 60% across production services.
+                Set up and maintain Grafana and Sentry so deploy and runtime errors are visible early.
               </li>
               <li class="text-sm text-gray-700 list-none mb-0" style="font-size: 14px;">
-                Constructed containerized build pipeline with Docker (2-5 containers) for appiGo Retailer eCommerce platform, delivering 2 production builds monthly with 99.9% uptime and Apache web server optimization.
+                Maintain the Docker build and release path for appiGo Retailer (staging then production). Improve Apache and server configuration when response times are high.
               </li>
               <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray;">
                 Skills Used: Docker, Kubernetes, GitLab CI/CD, AWS, Linux, Python, Bash, Grafana, Sentry, Ansible
@@ -145,65 +164,78 @@
         <div class="pt-3">
           <h3 class="text-sm font-bold text-blue-600 border-b-2 border-gray-300 mt-1 mb-3 uppercase" style="color: #046bfb">PROJECTS</h3>
 
+          <div class="ml-0 mb-0">
+            <div class="flex justify-between items-start">
+              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>Storedeck - </b>Commerce monorepo (deploy + data path)</h4>
+              <div class="flex">
+                <p class="text-sm text-gray-700">2026</p>
+              </div>
+            </div>
+            <ul class="pl-4 mb-0" style="margin-left: 0">
+              <li class="text-sm text-gray-700 list-none mb-0">Two Next.js apps (merchant and public portal) in a Turbo monorepo with Postgres, Prisma multi-tenant shops, and Redis for cache and rate limits. Documented deployment for AWS EC2 (Mumbai) and used soft deletes to keep audit history.</li>
+              <li class="text-sm text-gray-700 list-none mb-0">Focus on clean redeploys: separate environments, Turbo pipelines, and deployment documentation the team can follow.</li>
+              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: Next.js, Turbo, Prisma, PostgreSQL, Redis, AWS EC2, Docker-friendly setup, CI/CD</li>
+            </ul>
+          </div>
+
           <!-- Project 1 -->
           <div class="ml-0 mb-0">
             <div class="flex justify-between items-start">
-              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>Ticket Portal - </b>Event Ticketing Platform (<a href="https://ticket.rush.lk/" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">ticket.rush.lk</a>)</h4>
+              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>Ticket Portal - </b>Event Ticketing Platform (<a href="https://serendisco.rush.lk/" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">serendisco.rush.lk</a>)</h4>
               <div class="flex">
                 <p class="text-sm text-gray-700">2025 - 2026</p>
               </div>
             </div>
             <ul class="pl-4 mb-0" style="margin-left: 0">
-              <p class="text-base text-gray-700 mb-0">Affiliated with hSenid Mobile Solutions.</p>
+              <p class="text-base text-gray-700 mb-0">With hSenid Mobile Solutions.</p>
             
-              <li class="text-sm text-gray-700 list-none mb-0">Architected a production ticketing platform hosting 5+ live events, generating $3000+ in ticket sales, containerized with Docker and deployed via streamlined GitLab CI/CD pipelines, achieving zero-downtime releases for 1000+ paying customers.</li>
-              <li class="text-sm text-gray-700 list-none mb-0">Built and published the Android Ticket Validator app for this ecosystem using React Native (<a href="https://play.google.com/store/apps/details?id=lk.rush.appigo.ticketvalidator" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">play store</a>).</li>
-              <li class="text-sm text-gray-700 list-none mb-0">Published the mobile apps to Android and iOS stores, enhancing cross-platform functionality with React Native.</li>
-              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: Next.js, Prisma, PostgreSQL, Docker, GitLab CI/CD, Tailwind CSS, React Native, Monorepo Architecture</li>
+              <li class="text-sm text-gray-700 list-none mb-0">Supported the production ticketing platform for live events, including Docker images, GitLab deploy pipelines, and QR validation. Multiple events used the system with real ticket sales.</li>
+              <li class="text-sm text-gray-700 list-none mb-0">Built the React Native door scanner for that stack (<a href="https://play.google.com/store/apps/details?id=lk.rush.appigo.ticketvalidator" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">Play Store</a>) and published companion apps for Android and iOS.</li>
+              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: Next.js, Prisma, PostgreSQL, Docker, GitLab CI/CD, React Native</li>
             </ul>
           </div>
 
           <div class="ml-0 mb-0">
             <div class="flex justify-between items-start">
-              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>Sheet Ninja - </b>GitLab-Sheets Sync Platform (<a href="https://github.com/Lafarie/Sheet-Ninja" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">github</a>)</h4>
+              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>Sheet Ninja - </b>GitLab - Sheets sync (<a href="https://github.com/Lafarie/Sheet-Ninja" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">github</a>)</h4>
               <div class="flex">
                 <p class="text-sm text-gray-700">2025</p>
               </div>
             </div>
             <ul class="pl-4 mb-0" style="margin-left: 0">
-              <li class="text-sm text-gray-700 list-none mb-0">Built an enterprise-grade bidirectional sync platform between Google Sheets and GitLab with 6+ integrations, featuring a streamlined 6-step setup wizard, encrypted credentials, and Docker-based deployment enabling teams to sync 1000+ records safely with 99.9% uptime.</li>
-              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: Next.js, TypeScript, Prisma, PostgreSQL, Docker, NextAuth.js, Zustand, GitLab REST API, CI/CD</li>
+              <li class="text-sm text-gray-700 list-none mb-0">Side project to sync GitLab and Google Sheets without manual copy-paste. Multiple connectors, Docker deploy, setup wizard, and encrypted credentials.</li>
+              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: Next.js, TypeScript, Prisma, Docker, GitLab REST API, CI/CD</li>
             </ul>
           </div>
 
 
           <!-- Project 2 -->
-          <div class="ml-0 mb-0 mt-10 ">
+          <div class="ml-0 mb-0 mt-0 ">
             <div class="flex justify-between items-start">
-              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>appiGo Retailer - </b>eCommerce Website Builder (<a href="https://appigo.co/stores/" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">appigo.co/stores</a>)</h4>
+              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>appiGo Retailer - </b>eCommerce store builder (<a href="https://appigo.co/stores/" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">appigo.co/stores</a>)</h4>
               <div class="flex">
                 <p class="text-sm text-gray-700">2024 - Present</p>
               </div>
             </div>
             
             <ul class="pl-4 mb-0" style="margin-left: 0">
-              <li class=""><p class="text-base text-gray-700 mb-0">Affiliated with hSenid Mobile Solutions.</p></li>
-              <li class="text-sm text-gray-700 list-none mb-0">Architected containerized build pipeline with Docker (2-5 containers) for production eCommerce platform, delivering 2 release builds monthly across staging and production environments with 99.9% uptime; optimized Apache web server configuration, reducing response time by 35% and supporting 50,000+ concurrent requests per minute.</li>
-              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: Docker, GitLab CI/CD, Apache, Linux, Bash, Build Automation</li>
+              <li class=""><p class="text-base text-gray-700 mb-0">With hSenid Mobile Solutions.</p></li>
+              <li class="text-sm text-gray-700 list-none mb-0">Main operations role: Docker builds through GitLab, staging then production. Investigate Apache configuration and load when pages are slow. Document deploy steps for the team.</li>
+              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: Docker, GitLab CI/CD, Apache, Linux, Bash</li>
             </ul>
           </div>
 
           <!-- Project 3 -->
           <div class="ml-0 mb-0">
             <div class="flex justify-between items-start">
-              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>AIducator - </b>AI-Powered 3D eLearning Platform (<a href="https://aiducator.vercel.app/" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">live demo</a>)</h4>
+              <h4 class="text-sm font-bold text-gray-600 uppercase mt-1 mb-0"><b>AIducator - </b>3D eLearning app (<a href="https://aiducator.vercel.app/" class="text-blue-600 hover:underline lowercase" style="color: #046bfb">live demo</a>)</h4>
               <div class="flex">
                 <p class="text-sm text-gray-700">2024</p>
               </div>
             </div>
             <ul class="pl-4 mb-0" style="margin-left: 0">
-              <li class="text-sm text-gray-700 list-none mb-0">Directed a team of 6 engineers in a year-long project to research, design, and deploy an AI-powered eLearning platform serving 500+ students with ChatGPT-based tutoring, 3D model viewer with 50+ models, and personalized video recommendations; established Sentry error tracking across 3 environments, reducing mean time to resolution (MTTR) by 45%.</li>
-              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: React.js, Node.js, MySQL, ChatGPT API, Google Model Viewer API, Express.js, Sentry, REST API</li>
+              <li class="text-sm text-gray-700 list-none mb-0">Student team project (six members) with ChatGPT tutoring and a 3D model viewer. Added Sentry on project environments so crashes included stack traces for debugging.</li>
+              <li class="text-sm text-gray-500 font-bold list-none mb-0" style="font-size: 14px; font-weight: 700; color: gray">Skill Used: React, Node.js, MySQL, ChatGPT API, Express, Sentry</li>
             </ul>
           </div>
 
@@ -290,23 +322,17 @@
             <div class="flex-1">
               <h4 class="text-sm font-bold text-black mb-0">Hard Skills</h4>
               <div class="text-sm text-gray-700 mt-1 flex flex-wrap gap-x-3 gap-y-1" style="font-size: 0.9em">
-                <span><b>Programming Languages:</b> Python, Bash, JavaScript, Java, PHP</span>
+                <span><b>Languages:</b> Python, Bash, JavaScript, Java, PHP</span>
                 <span>|</span>
-                <span><b>Frameworks:</b> React, React Native, Next.js, Node.js, Express.js, FastAPI, JAX-RS</span>
+                <span><b>App tooling:</b> React, React Native, Next.js, Node.js, Express</span>
                 <span>|</span>
-                <span><b>DevOps & Cloud:</b> Docker, Kubernetes, GitLab CI/CD, AWS (EC2), Linux, Ansible</span>
+                <span><b>Ops:</b> Docker, Kubernetes, Docker Compose, GitLab CI/CD, GitHub Actions, AWS (EC2), Linux, Ansible, Harbor</span>
                 <span>|</span>
-                <span><b>Monitoring & Logging:</b> Grafana, Sentry</span>
+                <span><b>Observability:</b> Grafana, Sentry</span>
                 <span>|</span>
-                <span><b>Container & Orchestration:</b> Docker, Kubernetes, Docker Compose, Harbor, AWS</span>
+                <span><b>Data:</b> PostgreSQL, MySQL, MongoDB, Prisma</span>
                 <span>|</span>
-                <span><b>CI/CD Tools:</b> GitLab CI/CD, GitHub Actions</span>
-                <span>|</span>
-                <span><b>Version Control:</b> Git, GitHub, GitLab, Git Workflows, Branching Strategies</span>
-                <span>|</span>
-                <span><b>Databases:</b> PostgreSQL, MySQL, MongoDB, Prisma ORM</span>
-                <span>|</span>
-                <span><b>Other:</b> REST API, Microservices, Firebase, GCP, Tailwind CSS, Figma</span>
+                <span><b>Also:</b> Git/GitLab workflows, REST APIs, shell automation</span>
               </div>
             </div>
           </div>
@@ -318,19 +344,19 @@
           <div class="ml-5" style="margin-left: 20px">
             <ul class="mb-0">
               <div class="flex justify-between items-center mb-0">
-                <li class="text-sm text-gray-700 w-full list-disc">Volunteered at the Rotary Club Sunshine Games with office colleagues, contributing to event operations and community engagement.</li>
+                <li class="text-sm text-gray-700 w-full list-disc">Volunteered at the Rotary Club Sunshine Games with colleagues, supporting event operations.</li>
                 <div class="ml-auto font-bold text-sm">
                   <p class="text-sm">2025</p>
                 </div>
               </div>
               <div class="flex justify-between items-center mb-0">
-                <li class="text-sm text-gray-700 w-full list-disc">Participated in IEEEXtreme 18.0, a global 24-hour competitive programming challenge, together with Dhanuka Perera.</li>
+                <li class="text-sm text-gray-700 w-full list-disc">Participated in IEEEXtreme 18.0 with Dhanuka Perera (24-hour programming contest).</li>
                 <div class="ml-auto font-bold text-sm">
                   <p class="text-sm">2024</p>
                 </div>
               </div>
               <div class="flex justify-between items-center mb-0">
-                <li class="text-sm text-gray-700 w-full list-disc">Member of IEEE Student Branch of IIT (200+ members)</li>
+                <li class="text-sm text-gray-700 w-full list-disc">Member of the IEEE Student Branch at IIT</li>
                 <div class="w-32 ml-auto text-right font-bold text-sm">
                   <p class="text-sm">2023 - Present</p>
                 </div>

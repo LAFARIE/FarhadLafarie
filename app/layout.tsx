@@ -100,7 +100,7 @@ export default function RootLayout({ children }: RootLayoutProps): ReactNode {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="overflow-hidden bg-base text-ink">
+      <body className="bg-base text-ink">
         <VibeProvider>
           <Navbar />
           <VibeButton />
