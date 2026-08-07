@@ -27,7 +27,7 @@ export const SITE: SiteContent = {
   },
   hero: {
     welcomeTitle: "Welcome to My Portfolio",
-    defaultMode: "devops",
+    defaultMode: "developer",
     modeEyebrow: "mode",
     intro:
       "I'm a passionate developer with a focus on creating engaging and efficient user experiences. With a background in Software Engineering and a keen eye for design, I specialize in developing responsive, high-performing websites and applications using the latest web technologies.",

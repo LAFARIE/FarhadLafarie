@@ -1,5 +1,12 @@
 import type { ModeConfig } from "./types";
 
+/** Same featured trio on every mode/device so mobile and desktop match. */
+export const SHARED_FEATURED_PROJECT_IDS = [
+  "storedeck",
+  "kapruka",
+  "ticket-portal",
+] as const;
+
 export const MODES: Record<ModeConfig["id"], ModeConfig> = {
   devops: {
     id: "devops",
@@ -24,7 +31,7 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
       "Cloud Infrastructure & Deployments",
       "Automation & Shell Scripting",
     ],
-    featuredProjectIds: ["storedeck", "ticket-portal", "appigo-retailer"],
+    featuredProjectIds: [...SHARED_FEATURED_PROJECT_IDS],
   },
   developer: {
     id: "developer",
@@ -49,7 +56,7 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
       "Full-Stack Web & Mobile Development",
       "Responsive UI & API Integrations",
     ],
-    featuredProjectIds: ["storedeck", "kapruka", "ticket-portal"],
+    featuredProjectIds: [...SHARED_FEATURED_PROJECT_IDS],
   },
   "content-creator": {
     id: "content-creator",
@@ -75,7 +82,7 @@ export const MODES: Record<ModeConfig["id"], ModeConfig> = {
       "eLearning & Technical Visual Design",
       "Video Editing & Digital Storytelling",
     ],
-    featuredProjectIds: ["kapruka", "aiducator"],
+    featuredProjectIds: [...SHARED_FEATURED_PROJECT_IDS],
   },
 };
 

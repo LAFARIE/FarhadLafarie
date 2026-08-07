@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
       "Merchant admin + public storefront monorepo (Next.js, Turbo, Prisma, Postgres, Redis, Keycloak). Shops are multi-tenant, pages live as config, deploy notes for AWS Mumbai.",
     image:
       "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&q=80",
-    link: "https://github.com/Lafarie",
+    link: "https://github.com/Lafarie/Storedeck",
     status: "Completed",
     tech: [
       "Next.js",
@@ -135,14 +135,14 @@ export const PROJECTS: Project[] = [
     tags: ["developer"],
   },
   {
-    id: "wordpress-movies",
-    title: "WordPress Movies 2021",
+    id: "wordpress-ecommerce",
+    title: "WordPress eCommerce Site 2021",
     description:
-      "A movie sharing website built using WordPress with custom themes and plugins for enhanced user experience.",
+      "WordPress storefront for selling products online: catalog, cart, and checkout with custom theme work and plugins.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmRBmntSxZh99CBluc1Y-1vEERXQc9HqBbFg&s",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
     status: "Completed",
-    tech: ["WordPress", "PHP", "MySQL"],
+    tech: ["WordPress", "WooCommerce", "PHP", "MySQL"],
     tags: ["developer", "content"],
   },
 ];

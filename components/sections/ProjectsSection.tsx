@@ -30,35 +30,36 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="snap-section flex min-h-[100dvh] flex-col justify-center px-6 py-24"
+      className="snap-section flex min-h-[100dvh] flex-col justify-start px-6 pb-28 pt-28"
     >
       <div className="section-reveal mx-auto w-full max-w-6xl">
         <h2 className="low-poly-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           My Projects
         </h2>
         <p className="mt-3 max-w-2xl text-ink-dim">
-          Featured for {modeConfig.label.toLowerCase()}: Storedeck, Kapruka, and
-          role-matched work. Switch mode to re-rank the list.
+          Featured work (same on every screen): Storedeck, Kapruka Agra, and Ticket
+          Portal. Switch mode to change the list below.
         </p>
 
-        {/* Software Projects Grid */}
+        {/* Featured: fixed trio */}
         <div className="mt-10">
           <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-saffron">
             Featured
           </h3>
           <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((project) => (
-              <li key={project.id} className="low-poly-card p-4 flex flex-col justify-between">
+              <li
+                key={project.id}
+                className="low-poly-card flex flex-col justify-between p-4"
+              >
                 <div>
                   <div className="flex items-start justify-between gap-2">
-                    <h4 className="font-semibold text-ink">
-                      {project.title}
-                    </h4>
-                    <span className="shrink-0 text-xs text-ink-faint">{project.status}</span>
+                    <h4 className="font-semibold text-ink">{project.title}</h4>
+                    <span className="shrink-0 text-xs text-ink-faint">
+                      {project.status}
+                    </span>
                   </div>
-                  <p className="mt-2 text-sm text-ink-dim">
-                    {project.description}
-                  </p>
+                  <p className="mt-2 text-sm text-ink-dim">{project.description}</p>
                 </div>
 
                 <div>
@@ -88,123 +89,168 @@ export function ProjectsSection() {
           </ul>
         </div>
 
-        {/* YouTube Channels & Video Highlights  -  always visible */}
-        <div className="mt-16 border-t border-line/30 pt-12">
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-saffron">
-              YouTube Channels &amp; Video Edits
-            </h3>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              {/* Channel 1: officialJoelEditz */}
-              <div className="low-poly-card p-5 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-start justify-between">
-                    <h4 className="font-semibold text-ink flex items-center gap-1.5">
-                      <svg className="text-rose-600 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.516 3.5 12 3.5 12 3.5s-7.516 0-9.388.555a3.003 3.003 0 0 0-2.11 2.108C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.108c1.872.555 9.388.555 9.388.555s7.516 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                      </svg>
-                      @officialJoelEditz
-                    </h4>
-                    <span className="shrink-0 text-xs text-ink-faint font-semibold">Active</span>
-                  </div>
-                  <p className="mt-2 text-sm text-ink-dim">
-                    My YouTube channel specializing in funny meme edits, tech humor, and motion graphics. Combined storytelling with fast-paced video edits and engaging visual pacing.
-                  </p>
-                  <div className="mt-4 overflow-hidden rounded-lg border border-line aspect-video bg-black">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/Wjs4PNejlw4"
-                      title="JoelEditz Video"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
-                  </div>
-                </div>
-                <div className="mt-5">
-                  <div className="flex flex-wrap gap-1">
-                    {["Video Editing", "After Effects", "Premiere Pro", "Motion Graphics"].map((t) => (
-                      <span key={t} className="rounded-full border border-line px-2 py-0.5 text-[10px] text-ink-faint">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href="https://www.youtube.com/@officialJoelEditz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1 text-sm text-grape hover:text-saffron"
-                  >
-                    View Channel <ExternalLink size={12} />
-                  </a>
-                </div>
-              </div>
-
-              {/* Channel 2: Build2Learn */}
-              <div className="low-poly-card p-5 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-start justify-between">
-                    <h4 className="font-semibold text-ink flex items-center gap-1.5">
-                      <svg className="text-rose-600 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.516 3.5 12 3.5 12 3.5s-7.516 0-9.388.555a3.003 3.003 0 0 0-2.11 2.108C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.108c1.872.555 9.388.555 9.388.555s7.516 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                      </svg>
-                      @Build2Learn
-                    </h4>
-                    <span className="shrink-0 text-xs text-ink-faint font-semibold">Active</span>
-                  </div>
-                  <p className="mt-2 text-sm text-ink-dim">
-                    My educational YouTube channel dedicated to clarifying complex software concepts, programming languages, and networking infrastructure through visually rich lessons.
-                  </p>
-                  <div className="mt-4 overflow-hidden rounded-lg border border-line aspect-video bg-black">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/A2-6tZnyXjM"
-                      title="Build2Learn Video"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
-                  </div>
-                </div>
-                <div className="mt-5">
-                  <div className="flex flex-wrap gap-1">
-                    {["eLearning", "Motion Graphics", "Video Editing", "DevOps Education"].map((t) => (
-                      <span key={t} className="rounded-full border border-line px-2 py-0.5 text-[10px] text-ink-faint">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href="https://www.youtube.com/@Build2Learn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1 text-sm text-grape hover:text-saffron"
-                  >
-                    View Channel <ExternalLink size={12} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        {/* All Remaining Projects (Archive) */}
+        {/* More projects with links - before YouTube so desktop can see it */}
         {rest.length > 0 ? (
           <div className="mt-12">
             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-ink-faint">
               More for {modeConfig.label.toLowerCase()}
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-4 space-y-1">
               {rest.map((project) => (
                 <li
                   key={project.id}
-                  className="flex flex-wrap items-baseline justify-between gap-2 border-b border-line/50 py-3"
+                  className="border-b border-line/50 py-3 last:border-b-0"
                 >
-                  <span className="font-medium text-ink">{project.title}</span>
-                  <span className="text-xs text-ink-faint">{project.status}</span>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-wrap items-baseline justify-between gap-2"
+                    >
+                      <span className="inline-flex items-center gap-1.5 font-medium text-ink group-hover:text-grape">
+                        {project.title}
+                        <ExternalLink
+                          size={12}
+                          className="shrink-0 text-ink-faint group-hover:text-grape"
+                        />
+                      </span>
+                      <span className="text-xs text-ink-faint">{project.status}</span>
+                    </a>
+                  ) : (
+                    <div className="flex flex-wrap items-baseline justify-between gap-2">
+                      <span className="font-medium text-ink">{project.title}</span>
+                      <span className="text-xs text-ink-faint">{project.status}</span>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
         ) : null}
+
+        {/* YouTube at the bottom of this section */}
+        <div className="mt-16 border-t border-line/30 pt-12">
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-saffron">
+            YouTube Channels &amp; Video Edits
+          </h3>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            <div className="low-poly-card flex flex-col justify-between p-5">
+              <div>
+                <div className="flex items-start justify-between">
+                  <h4 className="flex items-center gap-1.5 font-semibold text-ink">
+                    <svg
+                      className="shrink-0 text-rose-600"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.516 3.5 12 3.5 12 3.5s-7.516 0-9.388.555a3.003 3.003 0 0 0-2.11 2.108C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.108c1.872.555 9.388.555 9.388.555s7.516 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    @officialJoelEditz
+                  </h4>
+                  <span className="shrink-0 text-xs font-semibold text-ink-faint">
+                    Active
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-ink-dim">
+                  YouTube channel for funny meme edits, tech humor, and motion
+                  graphics.
+                </p>
+                <div className="mt-4 aspect-video overflow-hidden rounded-lg border border-line bg-black">
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/Wjs4PNejlw4"
+                    title="JoelEditz Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="mt-5">
+                <div className="flex flex-wrap gap-1">
+                  {["Video Editing", "After Effects", "Premiere Pro", "Motion Graphics"].map(
+                    (t) => (
+                      <span
+                        key={t}
+                        className="rounded-full border border-line px-2 py-0.5 text-[10px] text-ink-faint"
+                      >
+                        {t}
+                      </span>
+                    ),
+                  )}
+                </div>
+                <a
+                  href="https://www.youtube.com/@officialJoelEditz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1 text-sm text-grape hover:text-saffron"
+                >
+                  View Channel <ExternalLink size={12} />
+                </a>
+              </div>
+            </div>
+
+            <div className="low-poly-card flex flex-col justify-between p-5">
+              <div>
+                <div className="flex items-start justify-between">
+                  <h4 className="flex items-center gap-1.5 font-semibold text-ink">
+                    <svg
+                      className="shrink-0 text-rose-600"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.516 3.5 12 3.5 12 3.5s-7.516 0-9.388.555a3.003 3.003 0 0 0-2.11 2.108C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.108c1.872.555 9.388.555 9.388.555s7.516 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    @Build2Learn
+                  </h4>
+                  <span className="shrink-0 text-xs font-semibold text-ink-faint">
+                    Active
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-ink-dim">
+                  Educational channel on software concepts, languages, and networking.
+                </p>
+                <div className="mt-4 aspect-video overflow-hidden rounded-lg border border-line bg-black">
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/A2-6tZnyXjM"
+                    title="Build2Learn Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="mt-5">
+                <div className="flex flex-wrap gap-1">
+                  {["eLearning", "Motion Graphics", "Video Editing", "DevOps Education"].map(
+                    (t) => (
+                      <span
+                        key={t}
+                        className="rounded-full border border-line px-2 py-0.5 text-[10px] text-ink-faint"
+                      >
+                        {t}
+                      </span>
+                    ),
+                  )}
+                </div>
+                <a
+                  href="https://www.youtube.com/@Build2Learn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1 text-sm text-grape hover:text-saffron"
+                >
+                  View Channel <ExternalLink size={12} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
